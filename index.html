@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Demo for jQuery.qrcode (https://larsjung.de/jquery-qrcode/).">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>52사단 예비군</title>
+  <title>박달과학화예비군훈련대</title>
   <!-- QR Code Start -->
   <link href="//fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
   <script src="web/jquery.min.js"></script>
@@ -241,10 +241,10 @@
                 <td>
                   <div class="select">
                     <span class="form-check">
-                      <input class="form-check-input" id="select1" type="radio" value="Y" name="q1" required><label class="form-check-label" for="select1">예</label> &nbsp&nbsp&nbsp
+                      <input class="form-check-input" name="quest1" id="select1" type="radio" value="Y" required><label class="form-check-label" for="select1">예</label> &nbsp&nbsp&nbsp
                     </span>
                     <span class="form-check">
-                      <input class="form-check-input" id="select2" type="radio" value="N" name="q1"><label class="form-check-label" for="select2">아니오</label>
+                      <input class="form-check-input" name="quest1" id="select2" type="radio" value="N"><label class="form-check-label" for="select2">아니오</label>
                     </span>
                   </div>
                 </td>
@@ -261,10 +261,10 @@
                 <td>
                   <div class="select">
                     <span class="form-check">
-                      <input class="form-check-input" id="select3" type="radio" value="Y" name="q2" required><label class="form-check-label" for="select3">예</label> &nbsp&nbsp&nbsp
+                      <input class="form-check-input" name="quest2" id="select3" type="radio" value="Y" required><label class="form-check-label" for="select3">예</label> &nbsp&nbsp&nbsp
                     </span>
                     <span class="form-check">
-                      <input class="form-check-input" id="select4" type="radio" value="N" name="q2"><label class="form-check-label" for="select4">아니오</label>
+                      <input class="form-check-input" name="quest2" id="select4" type="radio" value="N"><label class="form-check-label" for="select4">아니오</label>
                     </span>
                   </div>
                 </td>
@@ -281,10 +281,10 @@
                 <td>
                   <div class="select">
                     <span class="form-check">
-                      <input class="form-check-input" id="select5" type="radio" value="Y" name="q3" required><label class="form-check-label" for="select5">예</label> &nbsp&nbsp&nbsp
+                      <input class="form-check-input" name="quest3" id="select5" type="radio" value="Y" required><label class="form-check-label" for="select5">예</label> &nbsp&nbsp&nbsp
                     </span>
                     <span class="form-check">
-                      <input class="form-check-input" id="select6" type="radio" value="N" name="q3"><label class="form-check-label" for="select6">아니오</label>
+                      <input class="form-check-input" name="quest3" id="select6" type="radio" value="N"><label class="form-check-label" for="select6">아니오</label>
                     </span>
                   </div>
                 </td>
@@ -301,10 +301,10 @@
                 <td>
                   <div class="select">
                     <span class="form-check">
-                      <input class="form-check-input" id="select7" type="radio" value="Y" name="q4" required><label class="form-check-label" for="select7">예</label> &nbsp&nbsp&nbsp
+                      <input class="form-check-input" name="quest4" id="select7" type="radio" value="Y" required><label class="form-check-label" for="select7">예</label> &nbsp&nbsp&nbsp
                     </span>
                     <span class="form-check">
-                      <input class="form-check-input" id="select8" type="radio" value="N" name="q4"><label class="form-check-label" for="select8">아니오</label>
+                      <input class="form-check-input" name="quest4" id="select8" type="radio" value="N"><label class="form-check-label" for="select8">아니오</label>
                     </span>
                   </div>
                 </td>
@@ -321,10 +321,10 @@
                 <td>
                   <div class="select">
                     <span class="form-check">
-                      <input class="form-check-input" id="select9" type="radio" value="Y" name="q5" required><label class="form-check-label" for="select9">예</label> &nbsp&nbsp&nbsp
+                      <input class="form-check-input" name="quest5" id="select9" type="radio" value="Y" required><label class="form-check-label" for="select9">예</label> &nbsp&nbsp&nbsp
                     </span>
                     <span class="form-check">
-                      <input class="form-check-input" id="select10" type="radio" value="N" name="q5"><label class="form-check-label" for="select10">아니오</label>
+                      <input class="form-check-input" name="quest5" id="select10" type="radio" value="N"><label class="form-check-label" for="select10">아니오</label>
                     </span>
                   </div>
                 </td>
@@ -347,10 +347,10 @@
                 <td>
                   <div class="select">
                     <span class="form-check">
-                      <input type="radio" name="q6" id="q6Check1" value="A" class="form-check-input" required> <label class="form-check-label" for="q6Check1">동의</label> &nbsp&nbsp&nbsp
+                      <input class="form-check-input" name="q6" type="radio" id="q6Check1" value="A" required> <label class="form-check-label" for="q6Check1">동의</label> &nbsp&nbsp&nbsp
                     </span>
                     <span class="form-check">
-                      <input type="radio" name="q6" id="q6Check2" value="NA" class="form-check-input"> <label class="form-check-label" for="q6Check2">동의하지 않음</label>
+                      <input class="form-check-input" name="q6" type="radio" id="q6Check2" value="NA"> <label class="form-check-label" for="q6Check2">동의하지 않음</label>
                     </span>
                   </div>
                 </td>
@@ -543,6 +543,47 @@
       return res;
     }
 
+
+    function check_quest(){
+
+      var prob = "건강이상"
+      var noprob = "정상"
+
+      if ($('input[name="quest1"]:checked').val() == "Y") {
+        return prob;
+      }
+      else if ($('input[name="quest2"]:checked').val() == "Y") {
+        return prob;
+      }
+      else if ($('input[name="quest3"]:checked').val() == "Y") {
+        return prob;
+      }
+      else if ($('input[name="quest4"]:checked').val() == "Y") {
+        return prob;
+      }
+      else if ($('input[name="quest5"]:checked').val() == "Y") {
+        return prob;
+      }
+      else {
+        return noprob;
+      }
+    }
+
+
+    function check_agree() {
+      var agree = "동의"
+      var notagree = "비동의"
+
+      if ($("input[name='q6']:checked").val() == "NA") {
+        return notagree;
+      }
+
+      else {
+        return agree;
+      }
+    }
+
+
     function createQrCode() {
       var user_name = document.getElementById("in_name");
       var user_birth = document.getElementById("birth");
@@ -552,6 +593,7 @@
       var lunch_menu = document.getElementById("menu");
       $("#container").html('');
 
+
       if (confirm(
               "이름 : "+ user_name.value +"\n"+
               "생년월일 : "+ user_birth.value +"\n"+
@@ -559,6 +601,8 @@
               "계좌번호 : "+ bank_number.value +"\n"+
               "은행명 : "+ bank_name.value +"\n"+
               "도시락 : "+ lunch_menu.value +"\n"+
+              "문진결과 : "+ check_quest() +"\n"+
+              "보안서약 : "+ check_agree() +"\n"+
               "입력한 내용이 맞습니까?") == true
       ) {
         $(function make() {
@@ -573,18 +617,12 @@
             size: 250,
             fill: '#000000',
             background: 'white',
-            text: //translateKorToEng(user_name.value) + '\t'
-                    //+ user_birth.value + '\t'
-                    phone_number.value + '\t'
-                    + "'" + bank_number.value + '\t'
-                    + translateKorToEng(bank_name.value) + '\t' + '\t' //은행코드자리 넘김 추가
-                    + translateKorToEng(lunch_menu.value) + '\t'
-                    + translateKorToEng($("input[name='q1']:checked").val()) + '\t'
-                    + translateKorToEng($("input[name='q2']:checked").val()) + '\t'
-                    + translateKorToEng($("input[name='q3']:checked").val()) + '\t'
-                    + translateKorToEng($("input[name='q4']:checked").val()) + '\t'
-                    + translateKorToEng($("input[name='q5']:checked").val()) + '\t'
-                    + translateKorToEng($("input[name='q6']:checked").val()) + '\t',
+            text:
+                    translateKorToEng(bank_name.value) + '\t'
+                    + bank_number.value + '\t'
+                    + phone_number.value + '/'
+                    + translateKorToEng(check_quest()) + '/'
+                    + translateKorToEng(check_agree()) +,
             radius: 0,
             quiet: 10,
             mode: 4,
