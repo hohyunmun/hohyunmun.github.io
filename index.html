@@ -395,7 +395,7 @@
   <footer class="my-3 text-center text-small">
     <p class="mb-1"><br><span style=" font: 1.1em sans-serif; font-weight:bold;"> &copy; 수도방위사령부 제52보병사단</span></p>
     <p class="mb-1"><span style=" font: 1.03em sans-serif; font-weight:bold;">박달과학화예비군훈련대</span></p>
-    <p class="mb-1"><span style=" font: 1em/0.1em sans-serif;">v2.0.02</span></p><br>
+    <p class="mb-1"><span style=" font: 1em/0.1em sans-serif;">v1.3.02</span></p><br>
   </footer>
   <script>
     function handleOnInput_birth(el) {
@@ -617,12 +617,28 @@
             size: 250,
             fill: '#000000',
             background: 'white',
-            text:
+
+            text: 
+                  //translateKorToEng(user_name.value) + '\t'
+                  //+ user_birth.value + '\t'
+                    phone_number.value + '\t'
+                    + "'" + bank_number.value + '\t'
+                    + translateKorToEng(bank_name.value) + '\t' + '\t' //은행코드자리 넘김 추가
+                    + translateKorToEng(lunch_menu.value) + '\t'
+                    + translateKorToEng($("input[name='quest1']:checked").val()) + '\t'
+                    + translateKorToEng($("input[name='quest2']:checked").val()) + '\t'
+                    + translateKorToEng($("input[name='quest3']:checked").val()) + '\t'
+                    + translateKorToEng($("input[name='quest4']:checked").val()) + '\t'
+                    + translateKorToEng($("input[name='quest5']:checked").val()) + '\t'
+                    + translateKorToEng($("input[name='quest6']:checked").val()) + '\t',
+            
+            /*text:
                     translateKorToEng(bank_name.value) + '\t'
                     + bank_number.value + '\t'
                     + translateKorToEng(check_quest()) + '/'
                     + translateKorToEng(check_agree()) + '/'
-                    + phone_number.value,
+                    + phone_number.value,*/
+            
             radius: 0,
             quiet: 10,
             mode: 4,
